@@ -11,5 +11,6 @@ class Teams(models.Model):
     twitter_link = models.CharField(max_length=200)
     google_plus_link = models.CharField(max_length=200)
     created_date = models.DateField(auto_now_add=True)
+    updated_date = models.DateField(auto_now=True)
 
 
