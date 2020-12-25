@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class Teams(models.Model):
+class Team(models.Model):
     first_name = models.CharField(max_length=100,help_text='First Name')
     last_name = models.CharField(max_length=100, help_text='Last Name')
     designation = models.CharField(max_length=100, help_text='Designation')
@@ -12,5 +12,8 @@ class Teams(models.Model):
     google_plus_link = models.CharField(max_length=200)
     created_date = models.DateField(auto_now_add=True)
     updated_date = models.DateField(auto_now=True)
+
+    def __str__(self):
+        return "%s - %s" %(self.first_name, self.last_name)
 
 
